@@ -1,62 +1,108 @@
-import Layout from "../components/Layout";
-import BasicMeta from "../components/meta/BasicMeta";
-import OpenGraphMeta from "../components/meta/OpenGraphMeta";
-import TwitterCardMeta from "../components/meta/TwitterCardMeta";
-import { SocialList } from "../components/SocialList";
+import React from 'react';
+import { CategoryLink } from '../components/CategoryLink';
+import { CategoryCard } from '../components/CategoryCard';
+import { ArticleCard } from '../components/ArticleCard';
+import { categoryCards, articles } from '../data';
+import styles from './BlogPage.module.css';
+import BasicMeta from '../components/meta/BasicMeta';
+import { TagContent, listTags } from "../lib/tags";
+import { GetStaticProps } from "next";
 
-export default function Index() {
+type Props = {
+  tags: TagContent[];
+};
+
+export default function Index({ tags }: Props) {
   return (
-    <Layout>
-      <BasicMeta url={"/"} />
-      <OpenGraphMeta url={"/"} />
-      <TwitterCardMeta url={"/"} />
-      <div className="container">
-        <div>
-          <h1>
-            Hi, We're Next.js & Netlify<span className="fancy">.</span>
-          </h1>
-          <span className="handle">@nextjs-netlify-blog</span>
-          <h2>A blog template with Next.js and Netlify.</h2>
-          <SocialList />
+      <div className={styles.blogContainer}>
+      <header className={styles.header}>
+        <div className={styles.brand}>
+          <h1 className={styles.brandTitle}>Nanditha C P</h1>
+          <div className={styles.brandSubtitle}>Thought Cloud</div>
+          <BasicMeta url={"/"} />
         </div>
-      </div>
-      <style jsx>{`
-        .container {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex: 1 1 auto;
-          padding: 0 1.5rem;
-        }
-        h1 {
-          font-size: 2.5rem;
-          margin: 0;
-          font-weight: 500;
-        }
-        h2 {
-          font-size: 1.75rem;
-          font-weight: 400;
-          line-height: 1.25;
-        }
-        .fancy {
-          color: #15847d;
-        }
-        .handle {
-          display: inline-block;
-          margin-top: 0.275em;
-          color: #9b9b9b;
-          letter-spacing: 0.05em;
-        }
+        <hr className={styles.divider} />
+        <div className={styles.navigation}>
+          <div className={styles.tagline}>
+            Anything and Everything <em className={styles.taglineEmphasis}>Design</em>
+          </div>
+          <ul className={styles.categories}>
+            {tags.map((tag, index) => (
+              <li key={index}>
+              <CategoryLink key={index} {...tag} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </header>
 
-        @media (min-width: 769px) {
-          h1 {
-            font-size: 3rem;
-          }
-          h2 {
-            font-size: 2.25rem;
-          }
-        }
-      `}</style>
-    </Layout>
+      <section className={styles.intro}>
+        <div className={styles.introContent}>
+          <img 
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/95ce2caa2c5ab1c8b628c389da352801bdb37f1b6cba802c323b0973321a1b31?placeholderIfAbsent=true&apiKey=71249f2c33024956925bb4f9887c89d7" 
+            alt="Nanditha C P" 
+            className={styles.profileImage} 
+          />
+          <div className={styles.introText}>
+            <h2 className={styles.greeting}>
+              Hello Again, <br />
+              I'm Nanditha C P 👋🏻
+            </h2>
+            <p className={styles.description}>
+              A human centered visual communication and interaction designer,
+              with a knack for exploration through innovations and
+              conversations. I am a speculative thinker and endeavor to tie
+              the future, the contemporary and the history together to
+              generate intriguing and valuable ideas.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.categories}>
+        <div className={styles.categoryGrid}>
+          {categoryCards.map((card, index) => (
+            <CategoryCard key={index} {...card} />
+          ))}
+        </div>
+      </section>
+
+      <hr className={styles.divider} />
+
+      <section className={styles.articles}>
+        <h2 className={styles.sectionTitle}>Most Recent Articles</h2>
+        <div className={styles.articleGrid}>
+          {articles.map((article, index) => (
+            <ArticleCard key={index} {...article} />
+          ))}
+        </div>
+        <button className={styles.viewMore}>View more articles</button>
+      </section>
+
+      <footer className={styles.footer}>
+        <div className={styles.footerContent}>
+          <div className={styles.footerBrand}>
+            <div className={styles.brandTitle}>Nanditha C P</div>
+            <div className={styles.brandSubtitle}>Thought Cloud</div>
+          </div>
+          <div className={styles.footerLinks}>
+            <span className={styles.copyright}>Copyright 2024 by Nanditha C P</span>
+            <div className={styles.portfolioLink}>
+              <span>Portfolio</span>
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9eced50317727911886e0d098f63d6cf87e52aea1db0cbd3f98c5c59fa956123?placeholderIfAbsent=true&apiKey=71249f2c33024956925bb4f9887c89d7" alt="" className={styles.linkIcon} />
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const tags = listTags();
+  return {
+    props: {
+      tags,
+    },
+  };
+};

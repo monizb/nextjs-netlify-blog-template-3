@@ -1,0 +1,41 @@
+.card {
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 40px 80px 40px 25px;
+    color: #fff;
+  }
+  
+  .title {
+    font: 24px Archivo Black, sans-serif;
+    margin: 0;
+  }
+  
+  .icon {
+    width: 56px;
+    aspect-ratio: 1;
+    object-fit: contain;
+    margin: 70px 0 7px;
+  }
+  
+  .description {
+    font: 16px Manrope, sans-serif;
+    margin: 0;
+  }
+  
+  @media (max-width: 991px) {
+    .card {
+      padding: 0 20px;
+      margin-top: 6px;
+    }
+  
+    .icon {
+      margin-top: 40px;
+    }
+  
+    .title,
+    .description {
+      margin-left: 8px;
+    }
+  }

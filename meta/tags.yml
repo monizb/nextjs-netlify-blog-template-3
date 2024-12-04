@@ -1,13 +1,10 @@
 tags:
-  - slug: document
-    name: document
-  - slug: mock
-    name: mock
-  - slug: style
-    name: style
-  - slug: license
-    name: license
-  - slug: mdx
-    name: mdx
-  - slug: markdown
-    name: markdown
+  - slug: product-and-ui-ux
+    name: Product and UI/UX
+  - slug: interaction-design
+    name: Interaction Design
+  - slug: communication-design
+    name: Communication Design
+  - slug: insights-and-trends
+    name: Insights and Trends
+
