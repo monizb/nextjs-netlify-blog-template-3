@@ -8,6 +8,7 @@ import config from "../../lib/config";
 import { countPosts, listPostContent, PostContent } from "../../lib/posts";
 import { listTags, TagContent } from "../../lib/tags";
 import Head from "next/head";
+import Header from "../../components/Header";
 
 type Props = {
   posts: PostContent[];

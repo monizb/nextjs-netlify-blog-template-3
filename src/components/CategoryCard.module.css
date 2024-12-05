@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Russo+One&display=swap');
+
 .card {
     border-radius: 4px;
     display: flex;
@@ -8,7 +11,7 @@
   }
   
   .title {
-    font: 24px Archivo Black, sans-serif;
+    font: 24px Russo One, sans-serif;
     margin: 0;
   }
   
@@ -20,8 +23,9 @@
   }
   
   .description {
-    font: 16px Manrope, sans-serif;
+    font: 14px Manrope, sans-serif;
     margin: 0;
+    margin-top: 10px;
   }
   
   @media (max-width: 991px) {

@@ -12,7 +12,6 @@
   }
   
   .brand {
-    margin-left: 50px;
     color: #000;
   }
   
@@ -63,9 +62,8 @@
   .categoryGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 5px;
     width: 100%;
-    max-width: 1614px;
     margin: 0 auto;
   }
   

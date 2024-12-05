@@ -8,6 +8,7 @@
     flex-grow: 1;
     font: 400 16px Manrope, sans-serif;
     color: rgba(0, 0, 0, 1);
+    cursor: pointer;
   }
   
   .icon {
