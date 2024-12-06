@@ -3,6 +3,8 @@ import tags from "../../meta/tags.yml";
 export type TagContent = {
   readonly slug: string;
   readonly name: string;
+  readonly icon: string;
+  readonly description: string;
 };
 
 const tagMap: { [key: string]: TagContent } = generateTagMap();

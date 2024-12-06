@@ -87,6 +87,15 @@ collections:
                 name: "name"
                 widget: "string"
                 hint: "Tag name for displaying on the site"
+              - label: "Tag Icon"
+                name: "tagicon"
+                widget: "image"
+                choose_url: true
+                default: "/images/thumbnail-1-1-.png"
+              - label: "Tag Description"
+                name: "description"
+                widget: "string"
+                hint: "Tag description for displaying on the site"
 
   - name: "posts"
     label: "Posts"
@@ -104,14 +113,14 @@ collections:
       - label: "Title"
         name: "title"
         widget: "string"
+      - label: "Subtitle"
+        name: "subtitle"
+        widget: "string"
       - label: "Featured Image"
         name: "thumbnail"
         widget: "image"
         choose_url: true
         default: "/images/thumbnail-1-1-.png"
-        media_library:
-         config:
-          multiple: true
       - label: "Publish Date"
         name: "date"
         widget: "datetime"

@@ -13,6 +13,7 @@
   
   .brand {
     color: #000;
+    cursor: pointer;
   }
   
   .brandTitle {
@@ -72,6 +73,14 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin: 38px 0;
+  }
+
+  .articleGrid2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 38px 0;
+    padding: 0 40px;
   }
   
   .viewMore {

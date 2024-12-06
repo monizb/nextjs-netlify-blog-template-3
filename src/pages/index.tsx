@@ -1,6 +1,6 @@
 import React from 'react';
 import { CategoryCard } from '../components/CategoryCard';
-import { ArticleCard } from '../components/ArticleCard';
+import ArticleCard from '../components/ArticleCard';
 import { categoryCards, articles } from '../data';
 import styles from './BlogPage.module.css';
 import BasicMeta from '../components/meta/BasicMeta';
@@ -8,12 +8,24 @@ import { TagContent, listTags } from "../lib/tags";
 import { GetStaticProps } from "next";
 import Header from '../components/Header';
 import Heroheader from '../components/Heroheader';
+import { countPosts, listPostContent, PostContent } from "../lib/posts";
+import config from "../lib/config";
+import PostList from '../components/PostList';
+import Link from 'next/link';
 
 type Props = {
   tags: TagContent[];
+  posts: PostContent[];
+  pagination: {
+    current: number;
+    pages: number;
+  };
 };
 
-export default function Index({ tags }: Props) {
+export default function Index({ tags, posts, pagination }: Props) {
+
+  //restrict posts to first 6 only
+  posts = posts.slice(0, 6);
   return (
       <div className={styles.blogContainer}>
       <header className={styles.header}>
@@ -21,7 +33,7 @@ export default function Index({ tags }: Props) {
         {/* <hr className={styles.divider} /> */}
       </header>
 
-      <Heroheader tags={tags} />
+      <Heroheader tags={tags} heroDescription={null} heroTitle={null} />
 
       <div style={{borderBottom: "0.5px solid #757575"}}>
       <section className={styles.categories}>
@@ -37,12 +49,17 @@ export default function Index({ tags }: Props) {
 
       <section className={styles.articles}>
         <h2 className={styles.sectionTitle}>Most Recent Articles</h2>
+        {/* <div className={styles.articleGrid}>
+        <PostList posts={posts} tags={tags} pagination={pagination} showPagination={false} />
+        </div> */}
         <div className={styles.articleGrid}>
-          {articles.map((article, index) => (
-            <ArticleCard key={index} {...article} />
+          {posts.map((post, index) => (
+            <ArticleCard key={index} post={post}/>
           ))}
         </div>
+        <Link href="/posts">
         <button className={styles.viewMore}>View more articles</button>
+        </Link>
       </section>
 
       <footer className={styles.footer}>
@@ -65,10 +82,17 @@ export default function Index({ tags }: Props) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
+  const posts = listPostContent(1, config.posts_per_page);
   const tags = listTags();
+  const pagination = {
+    current: 1,
+    pages: Math.ceil(countPosts() / config.posts_per_page),
+  };
   return {
     props: {
+      posts,
       tags,
+      pagination,
     },
   };
 };

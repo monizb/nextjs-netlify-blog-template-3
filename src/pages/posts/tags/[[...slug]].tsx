@@ -12,26 +12,28 @@ import Head from "next/head";
 type Props = {
   posts: PostContent[];
   tag: TagContent;
+  tags: TagContent[];
   page?: string;
   pagination: {
     current: number;
     pages: number;
   };
 };
-export default function Index({ posts, tag, pagination, page }: Props) {
+export default function Index({ posts, tag, pagination, page, tags }: Props) {
   const url = `/posts/tags/${tag.name}` + (page ? `/${page}` : "");
   const title = tag.name;
   return (
-    <Layout>
+    <>
       <BasicMeta url={url} title={title} />
       <OpenGraphMeta url={url} title={title} />
       <TwitterCardMeta url={url} title={title} />
-      <TagPostList posts={posts} tag={tag} pagination={pagination} />
-    </Layout>
+      <TagPostList posts={posts} tag={tag} pagination={pagination} showPagination={true} tags={tags}/>
+    </>
   );
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const tags = listTags();
   const queries = params.slug as string[];
   const [slug, page] = [queries[0], queries[1]];
   const posts = listPostContent(
@@ -49,7 +51,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     tag: TagContent;
     pagination: { current: number; pages: number };
     page?: string;
-  } = { posts, tag, pagination };
+    tags: TagContent[];
+  } = { posts, tag, pagination, tags };
   if (page) {
     props.page = page;
   }
