@@ -3,7 +3,7 @@ import styles from "../pages/BlogPage.module.css";
 import { CategoryLink } from "../components/CategoryLink";
 
 
-const Heroheader = ({ tags, heroTitle, heroDescription }) => {
+const Heroheader = ({ tags, heroTitle, heroDescription, subtitle=null }) => {
   return (
     <section className={styles.intro}>
       <div className={styles.navigation}>
@@ -33,15 +33,19 @@ const Heroheader = ({ tags, heroTitle, heroDescription }) => {
       I'm Nanditha C P 👋🏻
     </>
   )}
+  {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
 </h2>
         </div>
         <div className={styles.introText}>
           <p className={styles.description}>
-            A human centered visual communication and interaction designer, with
-            a knack for exploration through innovations and conversations. I am
-            a speculative thinker and endeavor to tie the future, the
-            contemporary and the history together to generate intriguing and
-            valuable ideas.
+            {heroDescription ? heroDescription : !heroTitle && !heroDescription ? (
+              <>
+                I'm a UI/UX Designer, Front-end Developer, and a Blogger. I love
+                creating beautiful and functional digital experiences. I'm
+                passionate about design systems, user experience, and web
+                development. I write about design, development, and productivity.
+              </>
+            ) : null}
           </p>
         </div>
       </div>

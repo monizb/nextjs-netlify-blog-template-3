@@ -35,6 +35,11 @@
     margin: 0;
     cursor: pointer;
   }
+
+  .subtitle {
+    font: 20px Manrope, sans-serif;
+    color: #8E8E8E;
+  }
   
   .brandSubtitle {
     font: 16px Manrope, sans-serif;

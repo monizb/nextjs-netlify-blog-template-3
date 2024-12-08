@@ -8,7 +8,7 @@ import fs from "fs";
 import yaml from "js-yaml";
 import { parseISO } from 'date-fns';
 import PostLayout from "../../components/PostLayout";
-
+import { listTags } from "../../lib/tags";
 import InstagramEmbed from "react-instagram-embed";
 import YouTube from "react-youtube";
 import { TwitterTweetEmbed } from "react-twitter-embed";
@@ -21,6 +21,9 @@ export type Props = {
   author: string;
   description?: string;
   source: MdxRemote.Source;
+  tagsList: string[];
+  thumbnail?: string;
+  subtitle?: string;
 };
 
 const components = { InstagramEmbed, YouTube, TwitterTweetEmbed };
@@ -38,6 +41,9 @@ export default function Post({
   author,
   description = "",
   source,
+  tagsList,
+  thumbnail,
+  subtitle
 }: Props) {
   const content = hydrate(source, { components })
   return (
@@ -47,7 +53,10 @@ export default function Post({
       slug={slug}
       tags={tags}
       author={author}
+      tagsList={tagsList}
       description={description}
+      thumbnail={thumbnail}
+      subtitle={subtitle}
     >
       {content}
     </PostLayout>
@@ -64,6 +73,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params.post as string;
+  const tags = listTags();
   const source = fs.readFileSync(slugToPostContent[slug].fullPath, "utf8");
   const { content, data } = matter(source, {
     engines: { yaml: (s) => yaml.load(s, { schema: yaml.JSON_SCHEMA }) as object }
@@ -77,7 +87,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       description: "",
       tags: data.tags,
       author: data.author,
-      source: mdxSource
+      source: mdxSource,
+      tagsList: tags,
+      thumbnail: data.thumbnail,
+      subtitle: data.subtitle
     },
   };
 };

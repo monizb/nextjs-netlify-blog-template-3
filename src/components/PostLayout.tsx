@@ -12,6 +12,8 @@ import { SocialList } from "./SocialList";
 import TagButton from "./TagButton";
 import { getAuthor } from "../lib/authors";
 import { getTag } from "../lib/tags";
+import Header from "./Header";
+import Heroheader from "./Heroheader";
 
 type Props = {
   title: string;
@@ -21,6 +23,9 @@ type Props = {
   author: string;
   description?: string;
   children: React.ReactNode;
+  tagsList: string[];
+  thumbnail?: string;
+  subtitle?: string;
 };
 export default function PostLayout({
   title,
@@ -30,11 +35,22 @@ export default function PostLayout({
   tags,
   description = "",
   children,
+  tagsList,
+  thumbnail,
+  subtitle
 }: Props) {
   const keywords = tags.map(it => getTag(it).name);
   const authorName = getAuthor(author).name;
   return (
-    <Layout>
+    <>
+    <header className={styles.header}>
+        <Header />
+        {/* <hr className={styles.divider} /> */}
+      </header>
+      <Heroheader tags={tagsList} heroTitle={title} heroDescription={null} subtitle={subtitle} />
+      <div style={{margin: "5px 30px"}}>
+      <img src={thumbnail} alt={title} style={{width: "100%", height: "200%", borderRadius: 10}} />
+      </div>
       <BasicMeta
         url={`/posts/${slug}`}
         title={title}
@@ -60,16 +76,17 @@ export default function PostLayout({
         description={description}
       />
       <div className={"container"}>
+
         <article>
           <header>
-            <h1>{title}</h1>
+            {/* <h1>{title}</h1> */}
             <div className={"metadata"}>
-              <div>
+              {/* <div>
                 <Date date={date} />
               </div>
               <div>
                 <Author author={getAuthor(author)} />
-              </div>
+              </div> */}
             </div>
           </header>
           <div className={styles.content}>{children}</div>
@@ -92,7 +109,7 @@ export default function PostLayout({
         {`
             .container {
               display: block;
-              max-width: 36rem;
+              max-width: 46rem;
               width: 100%;
               margin: 0 auto;
               padding: 0 1.5rem;
@@ -233,6 +250,6 @@ export default function PostLayout({
             }
           `}
       </style>
-    </Layout>
+    </>
   );
 }
