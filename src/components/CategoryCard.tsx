@@ -4,7 +4,7 @@ import styles from './CategoryCard.module.css';
 import Router from 'next/router';
 import classNames from 'classnames'; // Install this via npm or yarn
 
-export const CategoryCard: React.FC<CategoryCardProps & { className?: string }> = ({
+export const CategoryCard: React.FC<CategoryCardProps> = ({
   title,
   description,
   iconUrl,
