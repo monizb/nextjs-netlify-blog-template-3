@@ -12,6 +12,7 @@ import { listTags } from "../../lib/tags";
 import InstagramEmbed from "react-instagram-embed";
 import YouTube from "react-youtube";
 import { TwitterTweetEmbed } from "react-twitter-embed";
+import Footer from "../../components/Footer";
 
 export type Props = {
   title: string;
@@ -47,6 +48,7 @@ export default function Post({
 }: Props) {
   const content = hydrate(source, { components })
   return (
+    <>
     <PostLayout
       title={title}
       date={parseISO(dateString)}
@@ -60,6 +62,8 @@ export default function Post({
     >
       {content}
     </PostLayout>
+    <Footer />
+    </>
   )
 }
 

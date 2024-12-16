@@ -11,6 +11,7 @@ export interface ArticleCardProps {
     description: string;
     iconUrl: string;
     backgroundColor: string;
+    href: string;
   }
   
   export interface CategoryLinkProps {

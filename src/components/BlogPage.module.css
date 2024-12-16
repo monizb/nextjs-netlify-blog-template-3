@@ -8,7 +8,7 @@
   
   .header {
     width: 100%;
-    max-width: 1484px;
+    /* max-width: 1484px; */
   }
   
   .brand {
@@ -144,7 +144,8 @@
   
     .viewMore {
       margin: 40px auto;
-      padding: 0 20px;
+      padding: 12px 30px;
+      font-size: 12px;
     }
   
     .footer {

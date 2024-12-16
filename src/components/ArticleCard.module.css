@@ -4,7 +4,7 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    border: 0.5px solid #1E1E1E;
+    border: 0.25px solid #1E1E1E;
     cursor: pointer;
   }
   
@@ -62,5 +62,27 @@
   @media (max-width: 991px) {
     .content {
       padding: 0 20px;
+    }
+
+    .title {
+      font-size: 24px;
+      margin: 15px 0 9px;
+    }
+
+    .icon {
+      width: 16px;
+    }
+
+    .categoryText {
+      font-size: 10px;
+    }
+
+    .category {
+      margin-top: 20px;
+    }
+
+    .description {
+      font-size: 12px;
+      margin-bottom: 20px;
     }
   }

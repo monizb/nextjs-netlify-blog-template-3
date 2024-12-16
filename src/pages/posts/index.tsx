@@ -9,6 +9,7 @@ import { countPosts, listPostContent, PostContent } from "../../lib/posts";
 import { listTags, TagContent } from "../../lib/tags";
 import Head from "next/head";
 import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 type Props = {
   posts: PostContent[];
@@ -27,6 +28,7 @@ export default function Index({ posts, tags, pagination }: Props) {
       <OpenGraphMeta url={url} title={title} />
       <TwitterCardMeta url={url} title={title} />
     <PostList posts={posts} tags={tags} pagination={pagination} showPagination={true} heroTitle="All Posts" heroDescription="Explore creative solutions and insights from my product and UI/UX design process." />
+    <Footer />
     </>
   );
 }

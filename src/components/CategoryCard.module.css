@@ -8,7 +8,9 @@
     align-items: start;
     padding: 40px 80px 40px 25px;
     color: #fff;
+    cursor: pointer;
   }
+  
   
   .title {
     font: 24px Russo One, sans-serif;
@@ -30,8 +32,12 @@
   
   @media (max-width: 991px) {
     .card {
-      padding: 0 20px;
+      padding: 15px 5px;
       margin-top: 6px;
+    }
+
+    .card img {
+      display: none;
     }
   
     .icon {
@@ -41,5 +47,14 @@
     .title,
     .description {
       margin-left: 8px;
+    }
+
+    .description {
+      margin-top: 35%;
+      font-size: 8px;
+    }
+
+    .title {
+      font-size: 12px;
     }
   }

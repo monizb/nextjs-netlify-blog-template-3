@@ -24,31 +24,36 @@ export const categoryCards: CategoryCardProps[] = [
     title: "Most Recent Articles",
     description: "Explore my most recent articles where I share insights, stories, and creative ideas from my journey.",
     iconUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/2fbeb9ef4797b4a04dc9f681930f4a84d601ae5fa5fbf2b1f622bf169d5e3e8c?placeholderIfAbsent=true&apiKey=71249f2c33024956925bb4f9887c89d7",
-    backgroundColor: "rgba(19, 44, 95, 1)"
+    backgroundColor: "rgba(19, 44, 95, 1)",
+    href: "most-recent"
   },
   {
     title: "Product and UI/UX",
     description: "Explore creative solutions and insights from my product and UI/UX design process.",
     iconUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/7e20f8b094b942d63e62dc5de2403b2a3503c5329f51989c17df21b8bdb6e34b?placeholderIfAbsent=true&apiKey=71249f2c33024956925bb4f9887c89d7",
-    backgroundColor: "rgba(33, 62, 120, 1)"
+    backgroundColor: "rgba(33, 62, 120, 1)",
+    href: "/posts/tags/product-and-ui-ux"
   },
   {
     title: "Interaction Design",
     description: "Discover how interaction design shapes seamless, engaging experiences.",
     iconUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/a768d7b3513c84de2063492d0cb162d2fee5ef64e8c8394ae6238dfea6b2ba33?placeholderIfAbsent=true&apiKey=71249f2c33024956925bb4f9887c89d7",
-    backgroundColor: "rgba(223, 100, 48, 1)"
+    backgroundColor: "rgba(223, 100, 48, 1)",
+    href: "/posts/tags/interaction-design"
   },
   {
     title: "Communication Design",
     description: "See how design communicates ideas and connects with audiences.",
     iconUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/1307ec4b3387c7bfd249ee9abfe174ab2dbbf7716731072ad995f93dfe7bb0fa?placeholderIfAbsent=true&apiKey=71249f2c33024956925bb4f9887c89d7",
-    backgroundColor: "rgba(72, 122, 180, 1)"
+    backgroundColor: "rgba(72, 122, 180, 1)",
+    href: "/posts/tags/communication-design"
   },
   {
     title: "Design Insights and Trends",
     description: "Stay updated with the latest trends and insights shaping the design world.",
     iconUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/9db896d0bca71b1798255dff99ef44571f98722823def1ca8f25da027c1e32b1?placeholderIfAbsent=true&apiKey=71249f2c33024956925bb4f9887c89d7",
-    backgroundColor: "rgba(60, 96, 163, 1)"
+    backgroundColor: "rgba(60, 96, 163, 1)",
+    href: "/posts/tags/insights-and-trends"
   }
 ];
 
