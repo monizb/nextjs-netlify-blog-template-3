@@ -38,11 +38,18 @@ export default function Index({ tags, posts, pagination }: Props) {
 
       <div className={styles.blogContent}>
       <section className={styles.categories}>
-        <div className={styles.categoryGrid}>
-          {categoryCards.map((card, index) => (
-            <CategoryCard key={index} {...card} />
-          ))}
-        </div>
+      <div className={styles.categoryGrid}>
+  {categoryCards.map((card, index) => {
+    const cardClass =
+      index === 3
+        ? styles['card--desktop-wide'] // 2nd card on desktop
+        : index === 2
+        ? styles['card--mobile-wide'] // 3rd card on mobile
+        : undefined;
+
+    return <CategoryCard key={index} {...card} className={cardClass} />;
+  })}
+</div>
       </section>
       </div>
 
