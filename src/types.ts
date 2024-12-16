@@ -12,7 +12,7 @@ export interface ArticleCardProps {
     iconUrl: string;
     backgroundColor: string;
     href: string;
-    className: string;
+    className?: string;
   }
   
   export interface CategoryLinkProps {

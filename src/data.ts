@@ -25,7 +25,7 @@ export const categoryCards: CategoryCardProps[] = [
     description: "Explore my most recent articles where I share insights, stories, and creative ideas from my journey.",
     iconUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/2fbeb9ef4797b4a04dc9f681930f4a84d601ae5fa5fbf2b1f622bf169d5e3e8c?placeholderIfAbsent=true&apiKey=71249f2c33024956925bb4f9887c89d7",
     backgroundColor: "rgba(19, 44, 95, 1)",
-    href: "most-recent"
+    href: "most-recent",
   },
   {
     title: "Product and UI/UX",
