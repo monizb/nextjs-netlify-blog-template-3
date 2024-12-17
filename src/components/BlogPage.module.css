@@ -136,7 +136,11 @@
       padding: 0 20px;
     }
   
-    .categoryGrid,
+    .categoryGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    
     .articleGrid2 {
       grid-template-columns: 1fr;
     }
