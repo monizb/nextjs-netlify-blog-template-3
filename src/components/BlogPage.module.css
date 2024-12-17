@@ -63,7 +63,7 @@
   .categoryGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
+    gap: 2px;
     width: 100%;
     margin: 0 auto;
   }
@@ -97,7 +97,6 @@
   
   .footer {
     background-color: rgba(42, 42, 40, 1);
-    width: 100%;
     padding: 48px 70px;
     color: #fff;
   }
@@ -138,7 +137,7 @@
     }
   
     .categoryGrid,
-    .articleGrid {
+    .articleGrid2 {
       grid-template-columns: 1fr;
     }
   

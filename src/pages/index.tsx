@@ -69,7 +69,7 @@ export default function Index({ tags, posts, pagination }: Props) {
         <button className={styles.viewMore}>View more articles</button>
         </Link>
       </section>
-      <Footer />
+      <Footer fullWidth />
     </div>
   );
 }

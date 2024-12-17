@@ -120,7 +120,7 @@
   .categoryGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
+    gap: 3px;
     width: 100%;
 }
 
@@ -180,7 +180,6 @@
   
   .footer {
     background-color: rgba(42, 42, 40, 1);
-    width: 100%;
     padding: 48px 70px;
     color: #fff;
   }
@@ -295,6 +294,11 @@
     .brandSubtitle {
       font: 10px Manrope, sans-serif;
     }
+
+    .subtitle {
+      font-size: 10px;
+      color: #8E8E8E;
+    }
   
     .tagline {
       padding: 7px 30px;
@@ -334,6 +338,7 @@
       justify-content: center;
       text-align: center;
       justify-items: center;
+      -webkit-justify-content: center;
     }
 
     .portfolioLink {
@@ -388,8 +393,9 @@
       display: none;
     }
   
-    .categoryGrid {
-      grid-template-columns: repeat(2, 1fr);
+    .categoryGrid,
+    .articleGrid2 {
+      grid-template-columns: 1fr;
     }
 
     .articleGrid {

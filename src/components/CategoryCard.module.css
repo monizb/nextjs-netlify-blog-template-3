@@ -33,7 +33,6 @@
   @media (max-width: 991px) {
     .card {
       padding: 15px 5px;
-      margin-top: 6px;
     }
 
     .card img {
@@ -50,7 +49,7 @@
     }
 
     .description {
-      margin-top: 35%;
+      margin-top: 27%;
       font-size: 8px;
     }
 

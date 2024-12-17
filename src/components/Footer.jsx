@@ -2,9 +2,9 @@ import React from 'react';
 import styles from '../pages/BlogPage.module.css';
 import Link from 'next/link';
 
-const Header = () => {
+const Header = ({fullWidth = false}) => {
     return (
-        <footer className={styles.footer}>
+        <footer className={styles.footer} style={{width: fullWidth === true ? "100%": null}}>
         <div className={styles.footerContent}>
           <div className={styles.footerBrand}>
             <div className={styles.brandTitle}>Nanditha C P</div>

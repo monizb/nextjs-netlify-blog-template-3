@@ -62,7 +62,6 @@ export default function Post({
     >
       {content}
     </PostLayout>
-    <Footer />
     </>
   )
 }
