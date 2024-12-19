@@ -26,9 +26,8 @@ export default function PostList({ posts, tags, pagination, showPagination, hero
     <section className={styles.articles}>
       <header className={styles.header}>
         <Header />
-        {/* <hr className={styles.divider} /> */}
       </header>
-      <Heroheader tags={tags} heroTitle={heroTitle} heroDescription={heroDescription} />
+      <Heroheader tags={tags} heroTitle={heroTitle} heroDescription={heroDescription} extraSpacing />
       <div className={styles.articleGrid2}>
           {posts.map((post, index) => (
             <ArticleCard key={index} post={post}/>

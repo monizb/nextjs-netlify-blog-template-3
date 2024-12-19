@@ -2,10 +2,11 @@ import React from "react";
 import styles from "../pages/BlogPage.module.css";
 import { CategoryLink } from "../components/CategoryLink";
 
-const Heroheader = ({ tags, heroTitle, heroDescription, subtitle = null }) => {
+const Heroheader = ({ tags, heroTitle, heroDescription, subtitle = null, extraSpacing=false }) => {
   return (
     <div style={{borderBottom: "0.5px solid #757575"}}>
       <section className={styles.intro}>
+        {extraSpacing && <div className={styles.mobileTopSpacing} />}
       <div className={styles.navigation}>
         <div className={styles.tagline}>
           Anything and Everything{" "}
