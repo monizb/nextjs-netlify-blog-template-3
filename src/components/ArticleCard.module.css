@@ -40,6 +40,9 @@
     width: 20px;
     aspect-ratio: 0.95;
     object-fit: contain;
+    border: 0.25px solid #AAAAAA;
+    padding: 5px;
+    border-radius: 10px;
   }
   
   .categoryText {

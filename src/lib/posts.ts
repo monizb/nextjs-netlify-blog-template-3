@@ -13,6 +13,7 @@ export type PostContent = {
   readonly fullPath: string;
   readonly thumbnail: string;
   readonly subcategory: string;
+  readonly startingText: string;
 };
 
 let postCache: PostContent[];
@@ -44,6 +45,7 @@ export function fetchPostContent(): PostContent[] {
         fullPath: string,
         thumbnail: string;
         subcategory: string;
+        startingText: string;
       };
       matterData.fullPath = fullPath;
 

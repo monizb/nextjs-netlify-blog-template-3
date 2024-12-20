@@ -116,6 +116,12 @@ collections:
       - label: "Subtitle"
         name: "subtitle"
         widget: "string"
+      - label: "Subcategory"
+        name: "subcategory"
+        widget: "string"
+      - label: "Starting Text"
+        name: "startingText",
+        widget: "string"
       - label: "Featured Image"
         name: "thumbnail"
         widget: "image"

@@ -23,7 +23,7 @@ export default function PostItem({ post }: Props) {
         <span className={styles.categoryText}>{post.subcategory}</span>
       </div>
       <h3 className={styles.title}>{post.title}</h3>
-      <p className={styles.description}>{post.title}</p>
+      <p className={styles.description}>{post.startingText}</p>
     </div>
   </article>
     </Link>
