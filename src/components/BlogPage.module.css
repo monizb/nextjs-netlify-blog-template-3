@@ -83,7 +83,9 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin: 38px 0;
-    padding: 0 60px;
+    padding: 0 170px;
+    max-width: 80vw;
+    margin-bottom: 60px;
   }
   
   .viewMore {
@@ -154,6 +156,7 @@
     .articleGrid2 {
       grid-template-columns: 1fr;
       padding: 0 25px;
+      max-width: 100%;
     }
   
     .viewMore {

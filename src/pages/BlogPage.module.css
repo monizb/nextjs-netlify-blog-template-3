@@ -25,6 +25,15 @@
     border-left: 0.5px solid #757575;
     border-right: 0.5px solid #757575;
   }
+
+  .introExtra {
+    margin: 160px;
+    margin-top: 120px;
+    margin-bottom: 0px;
+    padding-top: 30px;
+    border-left: 0.5px solid #757575;
+    border-right: 0.5px solid #757575;
+  }
   
   .brand {
     color: #000;
@@ -97,8 +106,9 @@
   }
 
   .articles {
-    padding: 30px 100px;
+    padding: 30px 170px;
     scroll-behavior: smooth;
+    max-width: 80vw;
   }
 
   .sectionTitle {
@@ -286,6 +296,12 @@
 
     .intro {
       margin-top: 85px;
+    }
+
+    .introExtra {
+      margin: 30px;
+      margin-top: 85px;
+      margin-bottom: 0px;
     }
 
     .sectionTitle {

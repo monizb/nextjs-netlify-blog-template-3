@@ -3,6 +3,14 @@
     gap: 6px;
     align-items: center;
   }
+
+  .categoryLink.active {
+    font-weight: bold; /* Or any other style */
+  }
+
+  .title.bold {
+    font-weight: bold;
+  }
   
   .title {
     flex-grow: 1;
