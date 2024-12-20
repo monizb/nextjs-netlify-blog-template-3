@@ -91,7 +91,7 @@ collections:
                 name: "tagicon"
                 widget: "image"
                 choose_url: true
-                default: "/images/thumbnail-1-1-.png"
+                default: "/images/600x300.png"
               - label: "Tag Description"
                 name: "description"
                 widget: "string"
@@ -126,7 +126,7 @@ collections:
         name: "thumbnail"
         widget: "image"
         choose_url: true
-        default: "/images/thumbnail-1-1-.png"
+        default: "/images/600x300.png"
       - label: "Publish Date"
         name: "date"
         widget: "datetime"
