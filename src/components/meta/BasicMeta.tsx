@@ -7,6 +7,7 @@ type Props = {
   keywords?: string[];
   author?: string;
   url: string;
+  image?: string;
 };
 export default function BasicMeta({
   title,
@@ -14,7 +15,10 @@ export default function BasicMeta({
   keywords,
   author,
   url,
+  image
 }: Props) {
+  const previewImage = image || null; // Fallback to a default image if none provided
+  const fullUrl = config.base_url + url;
   return (
     <Head>
       <title>
@@ -32,6 +36,9 @@ export default function BasicMeta({
             : config.site_keywords.map((it) => it.keyword).join(",")
         }
       />
+      <meta property="og:url" content={fullUrl} />
+      <meta property="og:image" content={previewImage} />
+      <meta property="og:type" content="website" />
       {author ? <meta name="author" content={author} /> : null}
       <link rel="canonical" href={config.base_url + url} />
     </Head>

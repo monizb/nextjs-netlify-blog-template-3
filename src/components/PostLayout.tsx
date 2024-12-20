@@ -68,6 +68,7 @@ export default function PostLayout({
         title={title}
         keywords={keywords}
         description={description}
+        image={thumbnail}
       />
       <TwitterCardMeta
         url={`/posts/${slug}`}
