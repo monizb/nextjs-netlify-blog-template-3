@@ -120,7 +120,7 @@ collections:
         name: "subcategory"
         widget: "string"
       - label: "Starting Text"
-        name: "startingText",
+        name: "startingText"
         widget: "string"
       - label: "Featured Image"
         name: "thumbnail"
