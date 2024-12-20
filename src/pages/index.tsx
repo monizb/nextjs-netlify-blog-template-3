@@ -24,9 +24,6 @@ type Props = {
 };
 
 export default function Index({ tags, posts, pagination }: Props) {
-
-  //restrict posts to first 6 only
-  posts = posts.slice(0, 6);
   return (
       <div className={styles.blogContainer}>
       <header className={styles.header}>
