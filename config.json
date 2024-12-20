@@ -1,19 +1,19 @@
 {
-  "base_url": "https://wutali-nextjs-netlify-blog.netlify.app",
-  "site_title": "Next.js Netlify Blog",
-  "site_description": "Next.js blog template for Netlify",
+  "base_url": "https://blog.nandithacp.com",
+  "site_title": "Nanditha CP's Blogs",
+  "site_description": "Nanditha CP's Blogs",
   "site_keywords": [
     {
-      "keyword": "Next.js"
+      "keyword": "UI/UX Design"
     },
     {
-      "keyword": "Netlify"
+      "keyword": "Frontend Development"
     },
     {
-      "keyword": "React"
+      "keyword": "Interaction Design"
     }
   ],
   "posts_per_page": 100,
-  "twitter_account": "@my-account",
+  "twitter_account": "@nanditha-cp",
   "github_account": "nanditha-c-p"
 }

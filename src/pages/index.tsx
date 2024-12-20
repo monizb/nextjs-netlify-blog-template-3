@@ -13,6 +13,8 @@ import config from "../lib/config";
 import PostList from '../components/PostList';
 import Link from 'next/link';
 import Footer from '../components/Footer';
+import OpenGraphMeta from '../components/meta/OpenGraphMeta';
+import TwitterCardMeta from '../components/meta/TwitterCardMeta';
 
 type Props = {
   tags: TagContent[];
@@ -24,12 +26,17 @@ type Props = {
 };
 
 export default function Index({ tags, posts, pagination }: Props) {
+  const url = "/posts";
+  const title = "Welcome";
   return (
       <div className={styles.blogContainer}>
       <header className={styles.header}>
         <Header />
         {/* <hr className={styles.divider} /> */}
       </header>
+      <BasicMeta url={url} title={title} />
+            <OpenGraphMeta url={url} title={title} />
+            <TwitterCardMeta url={url} title={title} />
 
       <Heroheader tags={tags} heroDescription={null} heroTitle={null} />
 
