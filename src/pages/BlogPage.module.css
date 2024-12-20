@@ -178,6 +178,10 @@
 
   .description {
     font-size: 14px;
+  }
+
+  .descriptionExtra {
+    font-size: 14px;
     max-width: 40%;
   }
 
@@ -362,7 +366,7 @@
       margin: 0px;
     }
 
-    .description {
+    .description, .descriptionExtra {
       font-size: 14px;
       margin-top: 10px;
       line-height: 19.12px;

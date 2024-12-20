@@ -42,7 +42,7 @@ const Heroheader = ({ tags, heroTitle, heroDescription, subtitle = null, extraSp
           </h2>
         </div>
         <div className={styles.introText}>
-          <p className={styles.description}>
+          <p className={extraSpacing ? styles.descriptionExtra : styles.description}>
             {heroDescription ? (
               heroDescription
             ) : !heroTitle && !heroDescription ? (
