@@ -150,6 +150,7 @@
     
     .articleGrid2 {
       grid-template-columns: 1fr;
+      padding: 0 25px;
     }
   
     .viewMore {

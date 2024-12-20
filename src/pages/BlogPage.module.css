@@ -247,6 +247,7 @@
   .copyrightmob {
     display: none;
   }
+  
   @media (max-width: 991px) {
 
     .navigation {
