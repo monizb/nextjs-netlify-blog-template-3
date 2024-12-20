@@ -14,7 +14,7 @@ const Header = ({fullWidth = false}) => {
           <span className={styles.copyright}>Copyright 2024 by Nanditha C P</span>
           <div className={styles.vl2}></div>
             <div className={styles.portfolioLink}>
-              <span>Portfolio</span>
+              <a href="https://nandithacp.com" target='_blank'>Portfolio</a>
               <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9eced50317727911886e0d098f63d6cf87e52aea1db0cbd3f98c5c59fa956123?placeholderIfAbsent=true&apiKey=71249f2c33024956925bb4f9887c89d7" alt="" className={styles.linkIcon} />
             </div>
             <div className={styles.copyrightmob}>

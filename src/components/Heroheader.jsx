@@ -20,7 +20,7 @@ const Heroheader = ({ tags, heroTitle, heroDescription, subtitle = null, extraSp
           ))}
         </ul>
       </div>
-      <div className={styles.introContent}>
+      <div className={extraSpacing ? styles.introContentExtra : styles.introContent}>
         <div
           className={styles.introHero}
         >

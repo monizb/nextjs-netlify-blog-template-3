@@ -73,7 +73,6 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 0 20px;
   }
   
   .tagline {
@@ -126,6 +125,7 @@
     margin: 30px;
     margin-top: 0px;
     padding: 5px;
+    margin-right: 0px;
     text-decoration: underline;
   }
   
@@ -162,15 +162,23 @@
     align-items: center;
   }
 
+  .introContentExtra {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 150px;
+  }
+
   .greeting {
     font: 40px Russo One, sans-serif;
-    margin-left: 20px;
     width: 100%;
   }
 
   .description {
     font-size: 14px;
-    margin-top: 40px;
+    max-width: 40%;
   }
 
   .introText {
@@ -220,9 +228,10 @@
     align-items: center;
   }
 
-  .portfolioLink span {
+  .portfolioLink a {
     text-decoration: underline;
     cursor: pointer;
+    color: white;
   }
   
   .linkIcon {
@@ -289,6 +298,12 @@
     }
 
     .introContent {
+      margin-top: 40px;
+      display: block;
+      padding-left: 2px;
+    }
+
+    .introContentExtra {
       margin-top: 40px;
       display: block;
       padding-left: 2px;
