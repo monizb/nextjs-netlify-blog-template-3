@@ -368,6 +368,7 @@
       line-height: 19.12px;
       margin-bottom: 0px;
       padding-bottom: 20px;
+      max-width: 100%;
     }
 
     .introText {
