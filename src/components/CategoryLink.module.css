@@ -17,6 +17,7 @@
     font: 400 16px Manrope, sans-serif;
     color: rgba(0, 0, 0, 1);
     cursor: pointer;
+    min-width: 200px;
   }
   
   .icon {

@@ -54,6 +54,7 @@ export default function PostLayout({
         heroTitle={title}
         heroDescription={null}
         subtitle={subtitle}
+        iverseSpace
       />
       <div className={styles.artContainer}>
       <div style={{ margin: 5 }}>

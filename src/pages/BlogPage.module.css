@@ -80,6 +80,7 @@
     padding: 15px 43px;
     border: 1px solid #000;
     font: 400 16px Manrope, sans-serif;
+    margin-left: 15px;
   }
   
   .taglineEmphasis {
@@ -174,6 +175,12 @@
   .greeting {
     font: 40px Russo One, sans-serif;
     width: 100%;
+  }
+
+  .greetingInverse {
+    font: 40px Russo One, sans-serif;
+    width: 100%;
+    margin-top: -50px;
   }
 
   .description {
@@ -361,6 +368,12 @@
     }
 
     .greeting {
+      margin-left: -3px;
+      font-size: 24px;
+      margin: 0px;
+    }
+
+    .greetingInverse {
       margin-left: -3px;
       font-size: 24px;
       margin: 0px;

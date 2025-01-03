@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../pages/BlogPage.module.css";
 import { CategoryLink } from "../components/CategoryLink";
 
-const Heroheader = ({ tags, heroTitle, heroDescription, subtitle = null, extraSpacing=false }) => {
+const Heroheader = ({ tags, heroTitle, heroDescription, subtitle = null, extraSpacing=false, iverseSpace=false }) => {
   return (
     <div style={{borderBottom: "0.5px solid #757575"}}>
       <section className={extraSpacing ? styles.introExtra: styles.intro}>
@@ -31,7 +31,7 @@ const Heroheader = ({ tags, heroTitle, heroDescription, subtitle = null, extraSp
               className={styles.profileImage}
             />
           )}
-          <h2 className={styles.greeting}>
+          <h2 className={iverseSpace ? styles.greetingInverse : styles.greeting}>
             {heroTitle || (
               <>
                 Hello Again, <br />

@@ -11,13 +11,14 @@ export const CategoryLink: React.FC<CategoryLinkProps> = ({ name, slug }) => {
   return (
     <Link href={"/posts/tags/[[...slug]]"} as={`/posts/tags/${slug}`}>
       <div className={`${styles.categoryLink} ${isActive ? styles.active : ''}`}>
-        <span className={`${styles.title} ${isActive ? styles.bold : ''}`}>{name}</span>
-        <img
+      <img
           loading="lazy"
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/035a10a8ee68bbaa516524af4033c41eeeb3a6efbef2093e56af6a36e3f143c9?placeholderIfAbsent=true&apiKey=71249f2c33024956925bb4f9887c89d7"
           alt=""
           className={styles.icon}
         />
+        <span className={`${styles.title} ${isActive ? styles.bold : ''}`}>{name}</span>
+        
       </div>
     </Link>
   );

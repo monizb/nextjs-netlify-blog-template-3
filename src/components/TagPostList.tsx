@@ -25,7 +25,7 @@ export default function TagPostList({ posts, tag, pagination, showPagination, ta
         <Header />
         {/* <hr className={styles.divider} /> */}
       </header>
-      <Heroheader tags={tags} heroTitle={tag.name} heroDescription={tag.description} extraSpacing />
+      <Heroheader tags={tags} heroTitle={tag.name} heroDescription={tag.description} />
       <div className={styles.articleGrid2}>
           {posts.map((post, index) => (
             <ArticleCard key={index} post={post}/>
