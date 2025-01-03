@@ -19,6 +19,10 @@
     cursor: pointer;
     min-width: 200px;
   }
+
+  .title:hover {
+    font-weight: bold;
+  }
   
   .icon {
     width: 24px;

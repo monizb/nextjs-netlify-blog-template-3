@@ -39,20 +39,19 @@ const Heroheader = ({ tags, heroTitle, heroDescription, subtitle = null, extraSp
               </>
             )}
             {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
+            <p className={extraSpacing ? styles.descriptionExtra : styles.description}>
+            {!heroTitle && !heroDescription ? (
+              <>
+                A human centered visual communication and interaction designer, with a knack for exploration through innovations and conversations. I am a speculative thinker and endeavor to tie the future, the contemporary and the history together to generate intriguing and valuable ideas.
+              </>
+            ) : null}
+          </p>
           </h2>
         </div>
         <div className={styles.introText}>
           <p className={extraSpacing ? styles.descriptionExtra : styles.description}>
             {heroDescription ? (
               heroDescription
-            ) : !heroTitle && !heroDescription ? (
-              <>
-                I'm a UI/UX Designer, Front-end Developer, and a Blogger. I love
-                creating beautiful and functional digital experiences. I'm
-                passionate about design systems, user experience, and web
-                development. I write about design, development, and
-                productivity.
-              </>
             ) : null}
           </p>
         </div>

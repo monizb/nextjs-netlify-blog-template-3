@@ -149,16 +149,16 @@
   }
 
   .profileImage {
-    width: 160px;
-    height: 120px;
+    width: 230px;
+    height: 200px;
     object-fit: cover;
     border-radius: 50%;
+    margin-right: 15px;
   }
 
   .introContent {
     padding-left: 15px;
     padding-right: 15px;
-    display: flex;
     justify-content: space-between;
     align-items: center;
   }
@@ -175,6 +175,7 @@
   .greeting {
     font: 40px Russo One, sans-serif;
     width: 100%;
+    line-height: 1.2;
   }
 
   .greetingInverse {
@@ -185,15 +186,23 @@
 
   .description {
     font-size: 14px;
+    font-family: Manrope, sans-serif;
+    max-width: 45%;
+    margin-top: 0px;
   }
 
   .descriptionExtra {
     font-size: 14px;
     max-width: 40%;
+    font-family: Manrope, sans-serif;
+    max-width: 50%;
   }
 
   .introText {
     width: 50%;
+    margin: 0;
+    margin-top: -40px;
+    padding-bottom: 20px;
   }
 
   
