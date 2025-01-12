@@ -36,7 +36,7 @@ export const categoryCards: CategoryCardProps[] = [
   },
   {
     title: "Interaction Design",
-    description: "Discover how interaction design shapes seamless, engaging experiences.",
+    description: "Discover how interaction design shapes seamless, engaging, and intuitive experiences that captivate users.",
     iconUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/a768d7b3513c84de2063492d0cb162d2fee5ef64e8c8394ae6238dfea6b2ba33?placeholderIfAbsent=true&apiKey=71249f2c33024956925bb4f9887c89d7",
     backgroundColor: "rgba(223, 100, 48, 1)",
     href: "/posts/tags/interaction-design"
@@ -49,7 +49,7 @@ export const categoryCards: CategoryCardProps[] = [
     href: "/posts/tags/communication-design"
   },
   {
-    title: "Design Insights and Trends",
+    title: "Insights and Trends",
     description: "Stay updated with the latest trends and insights shaping the design world.",
     iconUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/9db896d0bca71b1798255dff99ef44571f98722823def1ca8f25da027c1e32b1?placeholderIfAbsent=true&apiKey=71249f2c33024956925bb4f9887c89d7",
     backgroundColor: "rgba(60, 96, 163, 1)",

@@ -55,15 +55,12 @@
   }
 
   .card img {
-    display: none;
+    width: 22px;
+    margin-left: 6px;
   }
 
   .icon {
     margin-top: 40px;
-  }
-
-  .card:hover {
-    pointer-events: none;
   }
 
   .title,
@@ -72,11 +69,23 @@
   }
 
   .description {
-    margin-top: 27%;
+    margin-top: 2%;
     font-size: 8px;
   }
 
   .title {
     font-size: 12px;
+  }
+
+  .card:hover .whiteBox {
+    display: none;
+    opacity: 0;
+  }
+
+  
+  .card:hover .title {
+    display: block;
+    transform: translateX(0); /* Reset transform */
+    opacity: 1;
   }
 }
