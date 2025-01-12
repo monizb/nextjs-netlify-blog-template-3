@@ -20,7 +20,7 @@ const Header = ({tags}) => {
       </Link>
       <div className={styles.navContainer}>
         <button className={styles.menuButton} onClick={toggleMenu}>
-          {isMenuOpen ? '×' : <img src={"/images/DotsThreeCircle.png"} alt="Menu" height={25} style={{marginTop: 15}} />}
+          {isMenuOpen ? <p style={{color: "black"}}>×</p> : <img src={"/images/DotsThreeCircle.png"} alt="Menu" height={25} style={{marginTop: 15}} />}
         </button>
         <div className={`${styles.dropdownMenu} ${isMenuOpen ? styles.open : ''}`}>
           <ul style={{alignItems: 'center', textAlign: 'center'}}>
