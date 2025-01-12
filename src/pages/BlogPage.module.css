@@ -91,7 +91,7 @@
   }
 
   .heroTitleWrapper {
-    max-width: 55%;
+    max-width: 70%;
     width: 100%; /* Ensures responsive scaling */
     word-wrap: break-word; /* Ensures long text wraps properly */
   }

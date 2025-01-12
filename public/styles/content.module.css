@@ -9,7 +9,7 @@
 
 .content p {
   line-height: 1.5rem;
-  margin: 1.5rem 0 0 0;
+  margin: 0 0 1.5rem 0;
 }
 
 .content a {
@@ -18,14 +18,14 @@
 }
 
 .content h1 {
-  margin: 2.5rem 0 0 0;
+  margin: 0 0 2.5rem 0;
 }
 
 .content h2,
 .content h3,
 .content h4,
 .content h5 {
-  margin: 2rem 0 0 0;
+  margin: 0 0 0.7rem 0;
   line-height: 1.25em;
 }
 
@@ -44,7 +44,7 @@
   line-height: 1.25rem;
   padding: 1rem;
   overflow: auto;
-  margin: 1.75rem 0 0 0;
+  margin: 0 0 1.75rem 0;
 }
 
 .content pre code {
@@ -113,8 +113,8 @@
 
 .content ol,
 .content ul {
-  padding: 0 0 0 1.0rem;
-  margin: 1.5rem 0 0 0;
+  padding: 0 0 0 1.3rem;
+  margin: 0 0 1.5rem 0;
 }
 
 .content ol li,
