@@ -1,23 +1,31 @@
 .card {
-    border-radius: 12px;
-    background-color: #fff;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    border: 0.25px solid #1E1E1E;
-    cursor: pointer;
-  }
-  
-  .card:hover .image {
-    transform: scale(1.05);
-  }
-  
-  .image {
-    width: 100%;
-    aspect-ratio: 1.27;
-    object-fit: cover;
-    border-radius: 12px 12px 0 0;
-  }
+  border-radius: 12px;
+  background-color: #fff;
+  overflow: hidden; /* Ensures the image stays within the card */
+  display: flex;
+  flex-direction: column;
+  border: 0.25px solid #1E1E1E;
+  cursor: pointer;
+  z-index: 1; 
+}
+
+.card:hover .image {
+  transform: scale(1.1); /* Scales the image uniformly in all directions */
+  transition: transform 0.3s ease-in; /* Adds smooth ease-in animation */
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 1.27;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  transition: transform 0.1s ease-in; /* Ensures smooth return to original size */
+}
+
+.imageBox {
+  height: 300px;
+  overflow: hidden;
+}
   
   .content {
     padding: 30px 80px 47px 30px;
@@ -80,6 +88,11 @@
       padding: 0 20px;
     }
 
+    .imageBox {
+      height: 250px;
+      overflow: hidden;
+    }
+
     .title {
       font-size: 24px;
       margin: 15px 0 9px;
@@ -99,6 +112,6 @@
 
     .description {
       font-size: 12px;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
   }
