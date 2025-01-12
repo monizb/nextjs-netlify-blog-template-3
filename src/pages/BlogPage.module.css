@@ -54,6 +54,7 @@
   .subtitle {
     font: 20px Manrope, sans-serif;
     color: #8E8E8E;
+    margin-bottom: 0;
   }
   
   .brandSubtitle {
@@ -88,6 +89,12 @@
     font-weight: 700;
     font-style: italic;
   }
+
+  .heroTitleWrapper {
+    max-width: 55%;
+    width: 100%; /* Ensures responsive scaling */
+    word-wrap: break-word; /* Ensures long text wraps properly */
+  }
   
   .categories {
     display: flex;
@@ -108,13 +115,14 @@
   .articles {
     padding: 30px 170px;
     scroll-behavior: smooth;
-    max-width: 80vw;
+    max-width: 90vw;
   }
 
   .sectionTitle {
     font: 32px Manrope, sans-serif;
     font-weight: 600;
     margin: 0;
+    margin-top: 20px;
   }
 
   .categories2 {
@@ -161,6 +169,7 @@
     padding-right: 15px;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 10px;
   }
 
   .introContentExtra {
@@ -176,6 +185,7 @@
     font: 40px Russo One, sans-serif;
     width: 100%;
     line-height: 1.2;
+    margin: 0;
   }
 
   .greetingInverse {
@@ -184,11 +194,17 @@
     margin-top: -50px;
   }
 
+  .blogTitleMain {
+    max-width: 55%;
+    margin-bottom: 0;
+  }
+
   .description {
     font-size: 14px;
     font-family: Manrope, sans-serif;
     max-width: 45%;
     margin-top: 0px;
+    line-height: 1.2rem;
   }
 
   .descriptionExtra {
@@ -196,12 +212,30 @@
     max-width: 40%;
     font-family: Manrope, sans-serif;
     max-width: 50%;
+    line-height: 1.25rem;
   }
+
+  .descriptionI {
+    font-size: 14px;
+    font-family: Manrope, sans-serif;
+    max-width: 45%;
+    margin-top: 0px;
+    line-height: 1.2rem;
+  }
+
+  .descriptionExtraI {
+    font-size: 14px;
+    max-width: 40%;
+    font-family: Manrope, sans-serif;
+    max-width: 50%;
+    line-height: 1.25rem;
+  }
+
 
   .introText {
     width: 50%;
     margin: 0;
-    margin-top: -40px;
+    margin-top: -4px;
     padding-bottom: 20px;
   }
 
@@ -314,7 +348,7 @@
     }
     
     .articles {
-      padding: 0px 30px;
+      padding: 0px 26px;
     }
 
     .introContent {
@@ -322,6 +356,10 @@
       display: block;
       padding-left: 2px;
     }
+
+    .heroTitleWrapper {
+      max-width: 100%;
+    };
 
     .introContentExtra {
       margin-top: 40px;
@@ -331,17 +369,24 @@
 
     .intro {
       margin-top: 85px;
+      margin-left: 26px;
+      margin-right: 26px;
     }
 
     .introExtra {
-      margin: 30px;
+      margin: 26px;
       margin-top: 85px;
       margin-bottom: 0px;
     }
 
     .sectionTitle {
       font-size: 20px;
+      margin-top: 0px;
     }
+
+    .blogTitleMain {
+      max-width: 100%;
+    }  
 
     .profileImage {
       width: 100px;
@@ -380,15 +425,17 @@
       margin-left: -3px;
       font-size: 24px;
       margin: 0px;
+      max-width: 100%;
     }
 
     .greetingInverse {
       margin-left: -3px;
       font-size: 24px;
+      max-width: 100%;
       margin: 0px;
     }
 
-    .description, .descriptionExtra {
+    .description, .descriptionExtra, .descriptionI, .descriptionExtraI {
       font-size: 14px;
       margin-top: 10px;
       line-height: 19.12px;
@@ -399,6 +446,7 @@
 
     .introText {
       width: 95%;
+      padding-bottom: 0px;
     }
 
     .footerContent {
@@ -458,7 +506,7 @@
     .categories {
       border-left: none;
     border-right: none;
-    margin: 25px;
+    margin: 20px;
     margin-top: 0px;
     margin-bottom: 10px;
     }
@@ -476,6 +524,7 @@
 
     .articleGrid {
       grid-template-columns: 1fr;
+      margin-top: 20px;
     }
   
     .viewMore {

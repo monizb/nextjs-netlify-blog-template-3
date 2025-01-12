@@ -21,7 +21,10 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
         : document.getElementById('most-recent')?.scrollIntoView({ behavior: "smooth", block: "start"})
     }
   >
+    <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+    <div className={styles.whiteBox}/>
     <h3 className={styles.title}>{title}</h3>
+    </div>
     <img loading="lazy" src={iconUrl} alt="" className={styles.icon} />
     <p className={styles.description}>{description}</p>
   </div>

@@ -27,7 +27,7 @@ type Props = {
 
 export default function Index({ tags, posts, pagination }: Props) {
   const url = "/posts";
-  const title = "Welcome";
+  const title = "";
   return (
       <div className={styles.blogContainer}>
       <header className={styles.header}>

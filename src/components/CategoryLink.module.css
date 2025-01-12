@@ -10,6 +10,7 @@
 
   .title.bold {
     font-weight: bold;
+    pointer-events: none;
   }
   
   .title {
@@ -21,7 +22,7 @@
   }
 
   .title:hover {
-    font-weight: bold;
+    font-weight: 500;
   }
   
   .icon {

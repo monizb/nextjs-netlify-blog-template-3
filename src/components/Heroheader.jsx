@@ -32,29 +32,31 @@ const Heroheader = ({ tags, heroTitle, heroDescription, subtitle = null, extraSp
             />
           )}
           <h2 className={iverseSpace ? styles.greetingInverse : styles.greeting}>
-            {heroTitle || (
-              <>
-                Hello Again, <br />
-                I'm Nanditha C P 👋🏻
-              </>
-            )}
-            {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
-            <p className={extraSpacing ? styles.descriptionExtra : styles.description}>
-            {!heroTitle && !heroDescription ? (
-              <>
-                A human centered visual communication and interaction designer, with a knack for exploration through innovations and conversations. I am a speculative thinker and endeavor to tie the future, the contemporary and the history together to generate intriguing and valuable ideas.
-              </>
-            ) : null}
-          </p>
-          </h2>
+  <div className={styles.heroTitleWrapper}>
+    {heroTitle || (
+      <>
+        Hello Again, <br />
+        I'm Nanditha C P 👋🏻
+      </>
+    )}
+  </div>
+  {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
+  {!heroTitle  && <p className={extraSpacing ? styles.descriptionExtraI : styles.descriptionI}>
+    {!heroTitle && !heroDescription ? (
+      <>
+        A human-centered visual communication and interaction designer, with a knack for exploration through innovations and conversations. I am a speculative thinker and endeavor to tie the future, the contemporary, and the history together to generate intriguing and valuable ideas.
+      </>
+    ) : null}
+  </p>}
+</h2>
         </div>
-        <div className={styles.introText}>
+        {heroDescription && <div className={styles.introText}>
           <p className={extraSpacing ? styles.descriptionExtra : styles.description}>
             {heroDescription ? (
               heroDescription
             ) : null}
           </p>
-        </div>
+        </div>}
       </div>
     </section>
     </div>

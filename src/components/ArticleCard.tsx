@@ -14,7 +14,9 @@ export default function ArticleCard({ post }: Props) {
   return (
     <Link href={"/posts/" + post.slug}>
   <article className={styles.card}>
+    <div>
     {post.thumbnail && <img loading="lazy" src={post.thumbnail} alt="" className={styles.image} />}
+    </div>
     <div className={styles.content}>
       <div className={styles.category}>
         {getTag(post.tags[0]).icon && (

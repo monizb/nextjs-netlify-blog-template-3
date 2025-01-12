@@ -8,12 +8,15 @@
     cursor: pointer;
   }
   
+  .card:hover .image {
+    transform: scale(1.05);
+  }
+  
   .image {
     width: 100%;
     aspect-ratio: 1.27;
     object-fit: cover;
     border-radius: 12px 12px 0 0;
-
   }
   
   .content {
@@ -54,12 +57,22 @@
     color: #000;
     font: 400 26px Russo One, sans-serif;
     margin: 22px 0 9px;
-  }
+    display: -webkit-box; /* Enables multi-line truncation */
+    -webkit-line-clamp: 2; /* Limits to 2 lines */
+    -webkit-box-orient: vertical; /* Specifies box orientation */
+    overflow: hidden; /* Ensures the overflowing text is hidden */
+    text-overflow: ellipsis; /* Adds ellipsis to truncated text */
+  }  
   
   .description {
     color: #000;
     font: 400 16px Manrope, sans-serif;
     margin: 0;
+    display: -webkit-box; /* Enables multi-line truncation */
+    -webkit-line-clamp: 3; /* Limits to 3 lines */
+    -webkit-box-orient: vertical; /* Specifies box orientation */
+    overflow: hidden; /* Ensures the overflowing text is hidden */
+    text-overflow: ellipsis; /* Adds ellipsis to truncated text */
   }
   
   @media (max-width: 991px) {
