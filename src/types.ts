@@ -18,4 +18,5 @@ export interface ArticleCardProps {
   export interface CategoryLinkProps {
     name: string;
     slug: string;
+    mobile?: boolean;
   }
