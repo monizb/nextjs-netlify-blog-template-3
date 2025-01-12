@@ -335,11 +335,18 @@
 
 /* Mobile menu button */
 .menuButton {
-  display: none;
+  display: block;
   background: none;
   border: none;
   font-size: 2rem;
   cursor: pointer;
+  position: absolute; /* Ensure proper positioning */
+  top: 50%; /* Center vertically */
+  right: 15px; /* Align close to the right edge */
+  transform: translateY(-50%); /* Center vertically relative to itself */
+  padding: 0;
+  margin: 0;
+  z-index: 1000; /* Ensure it's above other elements */
 }
 
 /* Dropdown menu */
