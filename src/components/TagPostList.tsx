@@ -22,7 +22,7 @@ export default function TagPostList({ posts, tag, pagination, showPagination, ta
   return (
     <section className={styles.articles}>
       <header className={styles.header}>
-        <Header />
+        <Header tags={tags} />
         {/* <hr className={styles.divider} /> */}
       </header>
       <Heroheader tags={tags} heroTitle={tag.name} heroDescription={tag.description} />

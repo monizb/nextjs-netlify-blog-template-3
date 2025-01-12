@@ -46,7 +46,7 @@ export default function PostLayout({
     <>
     <div>
       <header className={styles.header}>
-        <Header />
+        <Header tags={tagsList} />
         {/* <hr className={styles.divider} /> */}
       </header>
       <Heroheader

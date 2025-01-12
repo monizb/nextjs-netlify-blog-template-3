@@ -16,6 +16,7 @@
   width: 100%; /* Full width */
   background-color: white;
   z-index: 10;
+  border-bottom: 0.5px solid #757575;
   }
 
   .intro {
@@ -39,7 +40,6 @@
   .brand {
     color: #000;
     padding: 30px 30px;
-    border-bottom: 0.5px solid #757575;
   }
 
   .blogContent {
@@ -326,6 +326,74 @@
   .copyrightmob {
     display: none;
   }
+
+  /* Navbar container */
+.navContainer {
+  position: relative;
+}
+
+/* Mobile menu button */
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/* Dropdown menu */
+.dropdownMenu {
+  display: none;
+  position: fixed; /* Fix to the screen */
+  right: 0;
+  top: 80px; /* Position below the navbar */
+  width: 100%; /* Full width */
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.3s ease-out;
+  z-index: 1000; /* Ensure it appears above other content */
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.dropdownMenu.open {
+  display: block;
+}
+
+.dropdownMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdownMenu ul li {
+  padding: 10px 20px;
+}
+
+.dropdownMenu ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Animation for the dropdown menu */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .menuButton {
+    display: block;
+  }
+}
   
   @media (max-width: 991px) {
 
@@ -338,12 +406,17 @@
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
   background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
     }
     
     .brand {
       margin-left: 0px;
       padding: 15px 15px;
       margin-top: 15px;
+      display: flex;
+      flex-direction: column;
     }
 
     .introHero {

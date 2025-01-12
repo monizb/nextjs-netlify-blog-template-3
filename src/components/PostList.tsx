@@ -25,7 +25,7 @@ export default function PostList({ posts, tags, pagination, showPagination, hero
   return (
     <section className={styles.articles}>
       <header className={styles.header}>
-        <Header />
+        <Header tags={tags} />
       </header>
       <Heroheader tags={tags} heroTitle={heroTitle} heroDescription={heroDescription} />
       <div className={styles.articleGrid2}>

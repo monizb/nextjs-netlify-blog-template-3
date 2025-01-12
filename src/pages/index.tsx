@@ -31,7 +31,7 @@ export default function Index({ tags, posts, pagination }: Props) {
   return (
       <div className={styles.blogContainer}>
       <header className={styles.header}>
-        <Header />
+        <Header tags={tags} />
         {/* <hr className={styles.divider} /> */}
       </header>
       <BasicMeta url={url} title={title} />
