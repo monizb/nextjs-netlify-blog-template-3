@@ -204,8 +204,9 @@
     font-size: 14px;
     font-family: Manrope, sans-serif;
     max-width: 45%;
-    margin-top: 0px;
+    margin-top: 5px;
     line-height: 1.2rem;
+    font-weight: 400;
   }
 
   .descriptionExtra {
@@ -214,6 +215,7 @@
     font-family: Manrope, sans-serif;
     max-width: 50%;
     line-height: 1.25rem;
+    font-weight: 400;
   }
 
   .descriptionI {
@@ -222,6 +224,7 @@
     max-width: 45%;
     margin-top: 0px;
     line-height: 1.2rem;
+    font-weight: 400;
   }
 
   .descriptionExtraI {
@@ -443,6 +446,7 @@
       margin-bottom: 0px;
       padding-bottom: 20px;
       max-width: 100%;
+      font-weight: 400;
     }
 
     .introText {
